@@ -7,7 +7,7 @@ if (args[0] === undefined) {
   console.log('Missing size');
 } else if (!isNaN(size)) {
   for (let i = 0; i < size; i++) {
-    console.log('x'.repeat(size));
+    console.log('X'.repeat(size));
   }
 } else {
   console.log('Missing size');
