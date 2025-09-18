@@ -5,4 +5,4 @@ function add (a, b) {
   const n2 = parseInt(b);
   return n1 + n2;
 }
-module.exports = add;
+module.exports = { add };
