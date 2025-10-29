@@ -1,0 +1,17 @@
+#!/usr/bin/node
+
+const request = require('request');
+const url = process.argv[2];
+
+if (!url) {
+  console.error('Please provide a URL as the first argument.');
+  process.exit(1);
+}
+
+request.get(url, (error, response) => {
+  if (error) {
+      console.error(error);
+      process.exit(1);
+  }
+  console.log(`code: ${response.statusCode}`);
+});
