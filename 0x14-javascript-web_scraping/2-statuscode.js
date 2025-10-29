@@ -10,8 +10,8 @@ if (!url) {
 
 request.get(url, (error, response) => {
   if (error) {
-      console.error(error);
-      process.exit(1);
+    console.error(error);
+    process.exit(1);
   }
   console.log(`code: ${response.statusCode}`);
 });
