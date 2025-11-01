@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
 const request = require('request');
-const API_BASE_URL = 'https://swapi-api.alx-tools.com/api';
 const episodeId = process.argv[2];
 
 if (!episodeId || isNaN(episodeId)) {
@@ -10,8 +9,7 @@ if (!episodeId || isNaN(episodeId)) {
   process.exit(1);
 }
 
-const url = `${API_BASE_URL}/films/${episodeId}/`;
-console.log('Requesting:', url);
+const url = `https://swapi-api.alx-tools.com/api/films/${episodeId}/`;
 
 request.get(url, { json: true }, (error, response, body) => {
   if (error) {
